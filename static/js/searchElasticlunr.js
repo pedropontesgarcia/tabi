@@ -640,9 +640,9 @@
         if (serialisedData.version !== elasticlunr.version) {
             elasticlunr.utils.warn(
                 'version mismatch: current ' +
-                    elasticlunr.version +
-                    ' importing ' +
-                    serialisedData.version
+                elasticlunr.version +
+                ' importing ' +
+                serialisedData.version
             );
         }
 
@@ -2631,12 +2631,12 @@ window.onload = function () {
     function openSearchModal() {
         lastFocusedElement = document.activeElement;
         loadSearchIndex();
-        searchModal.style.display = 'block';
+        searchModal.classList.add('open');
         searchInput.focus();
     }
 
     function closeModal() {
-        searchModal.style.display = 'none';
+        searchModal.classList.remove('hidden');
         clearSearch();
         if (lastFocusedElement && document.body.contains(lastFocusedElement)) {
             lastFocusedElement.focus();
@@ -2985,8 +2985,8 @@ window.onload = function () {
                     let snippetText = result.doc.body
                         ? generateSnippet(result.doc.body, searchTerm.split(/\s+/))
                         : result.doc.description
-                        ? result.doc.description
-                        : '';
+                            ? result.doc.description
+                            : '';
                     snippetElement.innerHTML = snippetText;
 
                     // Create the hyperlink.
@@ -3017,7 +3017,7 @@ window.onload = function () {
                 }
             });
 
-            results.addEventListener('click', function(event) {
+            results.addEventListener('click', function (event) {
                 const clickedElement = event.target.closest('a');
                 if (clickedElement) {
                     const clickedHref = clickedElement.getAttribute('href');

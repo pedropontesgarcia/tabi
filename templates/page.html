@@ -185,6 +185,13 @@ Current section extra: {% if current_section %}{{ current_section.extra | json_e
                     <li>{%- if previous_visible -%}{{ separator_with_class | safe }}{%- endif -%}<a class="external" href="{% include "partials/history_url.html" %}" {{ blank_target }} rel="{{ rel_attributes }}">{{ macros_translate::translate(key="see_changes", default="See changes", language_strings=language_strings) }}</a></li>
                 {%- endif -%}
             {% endif %}
+
+            {#- GitHub link -#}
+            {% if page.extra.github %}
+                <li>{%- if previous_visible -%}{{ separator_with_class | safe }}{%- endif -%}<a class="link external" href="{{ page.extra.github }}">{{ macros_translate::translate(key="repository", default="Repository", language_strings=language_strings) }}</a></li>
+                {#- Variable to keep track of whether we've shown a section, to avoid separators as the first element -#}
+                {%- set previous_visible = true -%}
+            {% endif %}
         </ul>
 
         {#- A page is part of a series if one of the sections above (whether it is transparent or not) has the `extra.series` parameter set to true. -#}
