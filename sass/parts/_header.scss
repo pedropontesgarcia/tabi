@@ -103,6 +103,8 @@ header {
 .separator {
     margin-inline-end: 0.2rem;
     user-select: none;
+    color: var(--primary-color);
+    font-weight: 500;
 }
 
 .language-switcher {
