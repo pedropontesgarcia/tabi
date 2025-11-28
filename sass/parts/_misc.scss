@@ -119,6 +119,10 @@ a:hover {
     color: var(--hover-color);
 }
 
+a:hover.no-bg {
+    background-color: inherit;
+}
+
 a:hover rt {
     color: var(--text-color);
 }
