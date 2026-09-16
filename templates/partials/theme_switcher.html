@@ -14,18 +14,6 @@
         tabindex="0"
         role="button"
         aria-label="{{ aria_label }}"
-        aria-pressed="false">
-    </div>
-
-    {%- set reset_str = language_strings["reset_mode"] | default(value="Reset mode to default") -%}
-
-    <div
-        title="{{ reset_str }}"
-        class="theme-resetter arrow"
-        tabindex="0"
-        role="button"
-        aria-hidden="true"
-        aria-label="{{ reset_str }}">
-    </div>
-
+        aria-pressed="false"
+    ></div>
 </li>
