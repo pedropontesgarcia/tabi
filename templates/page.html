@@ -198,7 +198,7 @@ Current section extra: {% if current_section %}{{ current_section.extra | json_e
             
             {#- GitHub link -#}
             {% if page.extra.github %}
-                <li>{%- if previous_visible -%}{{ separator_with_class | safe }}{%- endif -%}<a class="link external" href="{{ page.extra.github }}">{{ macros_translate::translate(key="repository", default="Repository", language_strings=language_strings) }}</a></li>
+                <li>{%- if previous_visible -%}{{ separator_with_class | safe }}{%- endif -%}<a class="link external" href="{{ page.extra.github }}">{{< translate key="repository" default="Repository" />}}</a></li>
                 {#- Variable to keep track of whether we've shown a section, to avoid separators as the first element -#}
                 {%- set previous_visible = true -%}
             {% endif %}

@@ -7,7 +7,11 @@
             {% break %}
         {% endif %}
         {# Determine which URL to use, default is page.permalink #}
-        {%- set blank_target %}{{< target_attribute new_tab={config.markdown.external_links_target_blank and page?.extra?.link_to} />}}{% endset %}{% set blank_target = blank_target | trim -%}
+        {%- set new_tab = false -%}
+        {%- if config.markdown.external_links_target_blank and page.extra.link_to -%}
+            {%- set new_tab = true -%}
+        {%- endif -%}
+        {%- set blank_target %}{{< target_attribute new_tab={new_tab} />}}{% endset%}{% set blank_target = blank_target | trim -%}
 
         {% set target_url = page?.extra?.link_to | default(value=page.permalink) %}
 
