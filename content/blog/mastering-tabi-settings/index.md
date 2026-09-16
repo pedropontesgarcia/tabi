@@ -957,6 +957,7 @@ By default, the date is shown below the post title. You can hide it with `show_d
 |  ❌  |   ❌    |      ✅       |         ❌        |         ❌          |
 
 tabi has three date formats: `long_date_format`, `short_date_format` and `archive_date_format`. The short format is used in a post's metadata, while the long format is used when listing posts (i.e. on the [blog section](@/blog/_index.md) or the [main page](@/_index.md)). The archive format is used to display day and month on the archive page.
+tabi has three date formats: `long_date_format`, `short_date_format` and `archive_date_format`. The short format is used in a post's metadata, while the long format is used when listing posts (i.e. on the [blog section](@/blog/_index.md) or the [main page](@/_index.md)). The archive format is used to display day and month on the archive page.
 
 In English, the defaults are "6th July 2049" for `long_date_format` and "6th Jul 2049" for `short_date_format`. For other languages, the default is `"dd MMMM y"` for the long format and `"d MMM y"` for the short format. The universal default for the archive format is `"dd MMM"`.
 

@@ -947,6 +947,7 @@ Por defecto, la fecha se muestra debajo del título de la publicación. Puedes o
 |   ❌   |   ❌    |      ✅       |         ❌         |         ❌          |
 
 tabi tiene tres formatos de fecha: `long_date_format`, `short_date_format` y `archive_date_format`. El formato corto se utiliza en los metadatos de una publicación, mientras que el formato largo se utiliza al listar las publicaciones (es decir, en la [sección de blog](/es/blog/) o en la [página principal](/es/)). El formato de archivo se usa para mostrar el día y el mes en la página de archivo.
+tabi tiene tres formatos de fecha: `long_date_format`, `short_date_format` y `archive_date_format`. El formato corto se utiliza en los metadatos de una publicación, mientras que el formato largo se utiliza al listar las publicaciones (es decir, en la [sección de blog](/es/blog/) o en la [página principal](/es/)). El formato de archivo se usa para mostrar el día y el mes en la página de archivo.
 
 En inglés, los valores predeterminados son "6th July 2049" para el formato largo y "6th Jul 2049" para el formato corto. Para otros idiomas, el predeterminado es `"dd MMMM y"` para el formato largo y `"d MMM y"` para el formato corto. El formato de archivo predeterminado universal es `"dd MMM"`.
 
